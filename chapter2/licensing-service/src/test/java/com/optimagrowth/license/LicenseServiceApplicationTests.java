@@ -8,6 +8,7 @@ class LicenseServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
+		
 	}
 
 }
