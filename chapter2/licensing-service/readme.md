@@ -1,10 +1,8 @@
-# Project Name
-
-Brief description of your project and its main purpose.
+# Chapter 2
 
 ## Table of Contents
 
-- [Project Name](#project-name)
+- [Chapter 2](#chapter-2)
 	- [Table of Contents](#table-of-contents)
 	- [Prerequisites](#prerequisites)
 	- [Installation](#installation)
