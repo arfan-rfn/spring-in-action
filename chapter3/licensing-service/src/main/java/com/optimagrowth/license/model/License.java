@@ -1,16 +1,36 @@
 package com.optimagrowth.license.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import org.springframework.hateoas.RepresentationModel;
 
-
+@Entity
+@Table(name = "licenses")
 public class License extends RepresentationModel<License> {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+
+	@Column(name = "license_id", nullable = false)
 	private String licenseId;
-	private String description;
+
+	@Column(name = "organization_id", nullable = false)
 	private String organizationId;
+
+	@Column(name = "product_name", nullable = false)
 	private String productName;
+
+	@Column(name = "license_type", nullable = false)
 	private String licenseType;
+
+	@Column(name = "description")
+	private String description;
 
 	public int getId() {
 		return id;
@@ -26,14 +46,6 @@ public class License extends RepresentationModel<License> {
 
 	public void setLicenseId(String licenseId) {
 		this.licenseId = licenseId;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
 	}
 
 	public String getOrganizationId() {
@@ -58,6 +70,14 @@ public class License extends RepresentationModel<License> {
 
 	public void setLicenseType(String licenseType) {
 		this.licenseType = licenseType;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	@Override
